@@ -4,7 +4,7 @@
 LOG_DIR="/var/log/clamav"
 DAILY_SCAN_LOG="$LOG_DIR/daily_scan.log"   # Log file for the daily scan
 SCAN_LOGS="$LOG_DIR/scan_logs.log"          # Log file for all scan logs
-USERNAME=$(who | awk '{print $1}')    # Get the username of the currently logged-in user to send notification
+USERNAME=$(who | awk '{print $1}' | head -n 1)    # Get the username of the currently logged-in user to send notification
 
 # Run ClamAV scan with priority and I/O niceness settings
 nice -n 19 ionice -c 3 clamscan --suppress-ok-results --recursive=yes --cross-fs=no / > "$DAILY_SCAN_LOG" 2>&1
