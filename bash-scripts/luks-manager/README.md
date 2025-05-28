@@ -23,7 +23,7 @@ This script was created based on the Debian Live environment (`debian-live-12.11
 ## Installation & Usage
 
 ```
-wget https://example.com/luks-manager.sh
+wget https://github.com/errormaster404/ScriptVault/blob/main/bash-scripts/luks-manager/luks-manager.sh
 chmod +x luks-manager.sh
 sudo ./luks-manager.sh
 ```
