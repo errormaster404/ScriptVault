@@ -1,3 +1,3 @@
-# ScriptVault
+# Scripts
 
 Scripts Collection
